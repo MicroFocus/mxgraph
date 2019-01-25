@@ -1,6 +1,6 @@
 25-JAN-2019: 3.9.13
 
-- Use swimlane own method to upgdate group bounds
+- Fix swimlane resize problem by using swimlane own method to upgdate group bounds
 
 14-DEC-2018: 3.9.12
 
