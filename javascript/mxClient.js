@@ -20,9 +20,9 @@ var mxClient =
 	 * 
 	 * versionMajor.versionMinor.buildNumber.revisionNumber
 	 * 
-	 * Current version is 3.9.12.
+	 * Current version is 3.9.13.
 	 */
-	VERSION: '3.9.12',
+	VERSION: '3.9.13',
 
 	/**
 	 * Variable: IS_IE
@@ -38529,7 +38529,7 @@ mxSwimlaneLayout.prototype.execute = function(parent, swimlanes)
 		
 		if (this.resizeParent && !this.graph.isCellCollapsed(parent))
 		{
-			this.graph.updateGroupBounds([parent], this.parentBorder, this.moveParent);
+			this.updateGroupBounds();
 		}
 		
 		// Maintaining parent location
@@ -38567,9 +38567,9 @@ mxSwimlaneLayout.prototype.updateGroupBounds = function()
 	var cells = [];
 	var model = this.model;
 	
-	for (var key in model.edgeMapper)
+	for (var key in model.edgeMapper.map)
 	{
-		var edge = model.edgeMapper[key];
+		var edge = model.edgeMapper.map[key];
 		
 		for (var i = 0; i < edge.edges.length; i++)
 		{
